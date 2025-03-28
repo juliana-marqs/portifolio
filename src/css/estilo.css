@@ -3,11 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
 :root {
-    --marromEscuro: #984c2a;
-    --marromClaro: #d0916c;
-    --bege: #dbcbbe;
-    --cinzaMarrom: #797464;
-    --cinza: #6a6d5b;
+    --corDestaqueInfos: #ffd3bf;
+    --corSombra: #d0916c;
+    --corTexto: #dbcbbe;
+    --corBg: #797464;
+    --corBgMenu: #6a6d5b;
 
     --titulo: "Montserrat", sans-serif;
     --textoPadrao: "Roboto Flex", sans-serif;
@@ -22,12 +22,12 @@
 
 a, li {
     list-style: none;
-    color: var(--bege);
+    color: var(--corTexto);
 }
 
 body {
-    background-color: var(--cinzaMarrom);
-    color: var(--bege);
+    background-color: var(--corBg);
+    color: var(--corTexto);
     font-size: 62.5%;
     font-family: var(--textoPadrao);
 }
@@ -48,8 +48,8 @@ body {
     width: 100%;
     height: 150px;
     grid-row: 1 / 2;
-    background-color: var(--cinza);
-    box-shadow: 1px 1px 1px var(--marromClaro);
+    background-color: var(--corBgMenu);
+    box-shadow: 1px 1px 1px var(--corSombra);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -64,7 +64,7 @@ body {
 .container header h1{
     font-size: 3.5em;
     font-weight: 400;
-    text-shadow: 1px 1px 1px var(--marromClaro);
+    text-shadow: 1px 1px 1px var(--corSombra);
     font-variant: small-caps;
 }
 
@@ -77,7 +77,7 @@ body {
 }
 
 .container header nav ul li a:hover {
-    text-shadow: 1px 1px 1px var(--marromClaro);
+    text-shadow: 1px 1px 1px var(--corSombra);
 }
 
 
@@ -106,7 +106,7 @@ body {
 .container main .main-sobre figure img{
     max-width: 70%;
     border-radius: 10px 100px 50px;
-    border: 2px solid var(--marromEscuro);
+    border: 2px solid var(--corDestaqueInfos);
 }
 
 .container main .main-sobre .conteudoSobre {
@@ -123,7 +123,7 @@ body {
     font-family: var(--titulo);
     font-weight: 500;
     padding: 10px;
-    text-shadow: 1px 1px 1px var(--marromClaro);
+    text-shadow: 1px 1px 1px var(--corSombra);
 }
 
 .container main .main-sobre .conteudoSobre p.apresentacao {
@@ -137,9 +137,9 @@ body {
 }
 
 .container main .main-sobre .conteudoSobre .links a{
-    background-color: var(--bege);
-    border: 1px solid var(--marromEscuro);
-    color: var(--cinza);
+    background-color: var(--corTexto);
+    border: 1px solid var(--corDestaqueInfos);
+    color: var(--corBgMenu);
     border-radius: 10px;
     padding: 10px 20px;
     margin-top: 10px;
@@ -147,8 +147,8 @@ body {
 }
 
 .container main .main-sobre .conteudoSobre .links a:hover{
-    background-color: var(--cinza);
-    color: var(--bege);
+    background-color: var(--corBgMenu);
+    color: var(--corTexto);
 }
 
 /* CONTEÚDO */
@@ -157,10 +157,21 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 30px;
+    align-items: stretch;
+    gap: 15px;
     height: 100vh;
-    padding-top: 100px;
+    width: 100%;
+    padding: 130px 50px 0;
+}
+
+.container hr {
+    border: 2px solid var(--corTexto);
+    margin: 20px 0;
+}
+
+.container .main-skill p {
+    color: var(--corDestaqueInfos);
+    font-size: .9em;
 }
 
 /* TITULOS MAIN*/
@@ -172,11 +183,24 @@ body {
     font-size: 2.6em;
     font-weight: 500;
     font-family: var(--titulo);
-    padding: 10px;
-    text-shadow: 1px 1px 1px var(--marromClaro);
+    padding: 5px;
+    text-shadow: 1px 1px 1px var(--corSombra);
     text-align: center;
     font-variant: small-caps;
 }
+
+
+/* IMAGENS PADRÃO -- MAIN*/
+
+.container .main-skill .softSkill ul li img,
+.container .main-skill .hardSkill ul li img,
+.container .main-certificacoes ul li img,
+.container .main-projetos .info-projetos img {
+    border-radius: 15%;
+    border: 2px solid var(--corDestaqueInfos);
+    max-width: 100%;
+}
+
 
 /* CONTEÚDO - SKILL */
 
@@ -185,7 +209,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .container .main-skill .softSkill ul li,
@@ -200,18 +224,106 @@ body {
     padding-top: 20px;
 }
 
-.container .main-skill .softSkill ul li img,
-.container .main-skill .hardSkill ul li img {
-    border-radius: 15px;
-    border: 2px solid var(--marromEscuro);
-    max-width: 100%;
-}
 
 /* CONTEÚDO - CERTIFICAÇÕES*/
+.container .main-certificacoes {
+    width: 100%;
+    height: 100vh;
+    padding-top: 170px;
+}
 
+.container .main-certificacoes ul {
+    padding: 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
 
+.container .main-certificacoes ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.container .main-certificacoes ul li div picture {
+    text-align: center;
+}
+
+.container .main-certificacoes ul li h4,
+.container .main-projetos .info-projetos h4{
+    font-size: 1.8em;
+    font-weight: 500;
+    padding-bottom: 5px;
+    font-variant: small-caps;
+    text-align: center;
+    text-shadow: 1px 1px 1px var(--corSombra);
+    padding-top: 5px;
+}
+
+.container .main-certificacoes ul li .info-certificacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.container .main-certificacoes ul li .info-certificacoes p{
+    font-size: 1.2em;
+    text-align: justify;
+    margin: 10px 5px 15px;
+}
+
+.container .main-certificacoes ul li .info-certificacoes a,
+.container .main-projetos .info-projetos a {
+    padding: 5px 10px;
+    background-color: var(--corTexto);
+    border: 1px solid var(--corDestaqueInfos);
+    color: var(--corBgMenu);
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.container .main-certificacoes ul li .info-certificacoes a:hover,
+.container .main-projetos .info-projetos a:hover{
+    background-color: var(--corBgMenu);
+    color: var(--corTexto);
+}
 
 /* CONTEÚDO - PROJETOS*/
+
+.container .main-projetos {
+    width: 100%;
+    height: 100vh;
+    padding-top: 180px;
+    margin-top: 200px;
+}
+
+.container .main-projetos .info-projetos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+}
+
+.container .main-projetos .info-projetos div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ 
+/* CONTEÚDO CONTATO*/
+
 
 
 
