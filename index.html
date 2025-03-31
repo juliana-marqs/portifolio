@@ -13,24 +13,16 @@
 <body>
     <div class="container">
         <header>
-            <h1><a href="./index.html">Juliana Marques</a></h1>
+            <h1>
+                <a href="./index.html">Juliana Marques</a>
+            </h1>
             <nav>
                 <ul>
-                    <li>
-                        <a href="#sobre">Sobre</a>
-                    </li>
-                    <li>
-                        <a href="#skill">Skill</a>
-                    </li>
-                    <li>
-                        <a href="#certificacoes">Certificações</a>
-                    </li>
-                    <li>
-                        <a href="#projetos">Projetos</a>
-                    </li>
-                    <li>
-                        <a href="#contato">Contato</a>
-                    </li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#skill">Skill</a></li>
+                    <li><a href="#certificacoes">Certificações</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </header>
@@ -55,54 +47,50 @@
                     <ul>
                         <li>
                             <picture>
-                                <source media="(min-width: 1024px)" srcset="https://placehold.co/200x200">
-                                <source media="(min-width: 728px)" srcset="https://placehold.co/150x150">
+                                <source media="(min-width: 800px)" srcset="https://placehold.co/150x150">
                                 <img src="https://placehold.co/100x100" alt="Imagem Ilustrativa">
                             </picture>
                             <p>Empatia</p>
                         </li>
                         <li>
                             <picture>
-                                <source media="(min-width: 1024px)" srcset="https://placehold.co/200x200">
-                                <source media="(min-width: 728px)" srcset="https://placehold.co/150x150">
+                                <source media="(min-width: 800px)" srcset="https://placehold.co/150x150">
                                 <img src="https://placehold.co/100x100" alt="Imagem Ilustrativa">
                             </picture>
                             <p>Adaptabilidade</p>
                         </li>
                         <li>
                             <picture>
-                                <source media="(min-width: 1024px)" srcset="https://placehold.co/200x200">
-                                <source media="(min-width: 728px)" srcset="https://placehold.co/150x150">
+                                <source media="(min-width: 800px)" srcset="https://placehold.co/150x150">
                                 <img src="https://placehold.co/100x100" alt="Imagem Ilustrativa">
                             </picture>
                             <p>Comunicação</p>
                         </li>
                     </ul>
                 </section>
+
                 <hr>
+
                 <section class="hardSkill">
                     <h2>Hard Skill</h2>
                     <ul>
                         <li>
                             <picture>
-                                <source media="(min-width: 1024px)" srcset="https://placehold.co/200x200">
-                                <source media="(min-width: 728px)" srcset="https://placehold.co/150x150">
+                                <source media="(min-width: 800px)" srcset="https://placehold.co/150x150">
                                 <img src="https://placehold.co/100x100" alt="Imagem Ilustrativa">
                             </picture>
                             <p>HTML5</p>
                         </li>
                         <li>
                             <picture>
-                                <source media="(min-width: 1024px)" srcset="https://placehold.co/200x200">
-                                <source media="(min-width: 728px)" srcset="https://placehold.co/150x150">
+                                <source media="(min-width: 800px)" srcset="https://placehold.co/150x150">
                                 <img src="https://placehold.co/100x100" alt="Imagem Ilustrativa">
                             </picture>
                             <p>CSS3</p>
                         </li>
                         <li>
                             <picture>
-                                <source media="(min-width: 1024px)" srcset="https://placehold.co/200x200">
-                                <source media="(min-width: 728px)" srcset="https://placehold.co/150x150">
+                                <source media="(min-width: 800px)" srcset="https://placehold.co/150x150">
                                 <img src="https://placehold.co/100x100" alt="Imagem Ilustrativa">
                             </picture>
                             <p>??</p>
@@ -191,43 +179,37 @@
 
             <section id="contato" class="main-contato">
                 <h2>Contato</h2>
-                <div>
-                    <h3>Instagram</h3>
-                    <a href="">
-                        <img src="https://placehold.co/100x100" alt="Imagem Ilustrativa">
-                    </a>
-                </div>
+                <form action="https://formspree.io/f/cont4tojuliana@gmail.com" method="post">
+                    <div class="contato-name">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
 
-                <div>
-                    <h3>E-mail</h3>
-                    <a href="">
-                        <img src="https://placehold.co/100x100" alt="Imagem Ilustrativa">
-                    </a>
-                </div>
+                    <div class="contato-email">
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
 
-                <div>
-                    <h3>GitHub</h3>
-                    <a href="">
-                        <img src="https://placehold.co/100x100" alt="Imagem Ilustrativa">
+                    <label for="message">Mensagem:</label>
+                    <div class="contato-message">
+                        <textarea name="message" id="message" rows="5" cols="30" required></textarea>
+                    </div>
+                        <input type="submit" value="Enviar" class="btn">
+                </form>
+                
+                <footer>
+                    <a href="#" title="Instagram">
+                        <i class="fab fa-instagram-square"></i>
                     </a>
-                </div>
+                    <a href="#" title="Linkedin">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" title="GitHub">
+                        <i class="fab fa-github-square"></i>
+                    </a>
+                </footer>
             </section>
         </main>
-
-        <!-- <footer>
-            <a href="#">
-                <i class="fab fa-facebook-square"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-twitter-square"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-pinterest"></i>
-            </a>
-        </footer> -->
     </div>
 </body>
 </html>

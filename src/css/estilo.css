@@ -87,6 +87,7 @@ body {
 .container main {
     grid-row: 2 / 3;
     position: relative;
+    min-height: 100vh;
 }
 
 .container main .main-sobre{
@@ -157,16 +158,16 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     gap: 15px;
     height: 100vh;
-    width: 100%;
-    padding: 130px 50px 0;
+    padding-top: 140px;
 }
 
 .container hr {
-    border: 2px solid var(--corTexto);
-    margin: 20px 0;
+    border: 1px solid var(--corTexto);
+    margin: 10px 0;
+    width: 70%;
 }
 
 .container .main-skill p {
@@ -203,11 +204,15 @@ body {
 
 
 /* CONTEÚDO - SKILL */
+.container .main-skill .softSkill,
+.container .main-skill .hardSkill {
+    width: 100%;
+}
 
 .container .main-skill .softSkill ul,
 .container .main-skill .hardSkill ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 20px;
 }
@@ -302,7 +307,7 @@ body {
     width: 100%;
     height: 100vh;
     padding-top: 180px;
-    margin-top: 200px;
+    margin-top: 280px;
 }
 
 .container .main-projetos .info-projetos{
@@ -324,11 +329,82 @@ body {
  
 /* CONTEÚDO CONTATO*/
 
+.container .main-contato {
+    width: 100%;
+    height: 100vh;
+    margin-top: 100px;
+    padding-top: 190px;
+    display: flex;
+    flex-direction: column;
+}
 
+.container .main-contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--corDestaqueInfos);
+    box-shadow: 2px 2px 2px var(--corSombra);
+    border-radius: 10px;
+    width: 400px;
+    margin: auto;
+    font-size: 2em;
+    font-variant: small-caps;
+    padding: 15px;
+}
 
+.container .main-contato form input.btn{
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: var(--corDestaqueInfos);
+    color: var(--corBgMenu);
+}
 
 /* RODAPÉ */
 
 .container footer {
     grid-row: 3 / -1;
+    font-size: 2.4em;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container footer a{
+    padding: 5px;
+    color: var(--corDestaqueInfos);
+}
+
+.container footer a:hover {
+    color: var(--corSombra);
+}
+
+@media (min-width: 800px) {
+    .container .main-skill h2,
+.container .main-certificacoes h2,
+.container .main-projetos h2,
+.container .main-contato h2{
+        font-size: 3em;
+    }
+
+    .container .main-skill{
+        justify-content: space-around;
+    }
+
+    .container .main-certificacoes ul{
+        flex-direction: row;
+        height: 100%;
+        justify-content: space-around;
+    }
+
+    .container .main-projetos ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+    }
 }
